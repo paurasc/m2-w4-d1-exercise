@@ -19,12 +19,23 @@
      </div>
 
 <script>
-    var vm1 = new Vue({
-        el: '#component1'
-    });
-    var vm2 = new Vue({
-        el: '#component2'
-    });
+var vm1 = new Vue({
+  el: '#component1',
+  components: {
+    'mycomponent1': {
+      template: '<div><h1>Welcome to VUE Components!</h1></div>'
+    }
+  }
+});
+
+var vm2 = new Vue({
+  el: '#component2',
+  components: {
+    'mycomponent2': {
+      template: '<div><p>VUE is interesting!</p></div>'
+    }
+  }
+});
     var vm3 = new Vue({
         el: '#component3'
     });

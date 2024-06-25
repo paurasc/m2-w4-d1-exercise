@@ -6,25 +6,27 @@
 
 <script> 
 
-function Person(FirstName, LastName, Age) {
-        //Parameters/Properties as Constructor
-        
-        //Method
-        this.getFullName = function () {
-            return this.firstName + " " + this.lastName;
-        }
+function Person(firstName, lastName, age) {
+    // Parameters/Properties as Constructor
+    this.firstName = firstName || "unknown"; // default value
+    this.lastName = lastName || "unknown";   // default value
+    this.age = age || 25;                    // default value
+    
+    // Method
+    this.getFullName = function () {
+        return this.firstName + " " + this.lastName;
+    }
 };
 
-//Create object 1
-var person1 = new Person();
+// Create object 1
+var person1 = new Person("James","Bond",50);
 alert(person1.getFullName());
 
-//Create object 2
-var person2 = new Person();
+// Create object 2
+var person2 = new Person("Wonder","Woman");
 alert(person2.getFullName());
 
 </script>
-
 
 </body>
 </html>
